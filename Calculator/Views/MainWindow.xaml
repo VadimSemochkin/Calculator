@@ -1,0 +1,47 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="textBox1" Grid.Column="0" Grid.Row="0"  FontSize="20"  Foreground="Black" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" BorderBrush="#FF6F7072" BorderThickness="1" Margin="5,0,5,0"/>
+
+        <TextBox x:Name="textBox2" Grid.Column="0" Grid.Row="1"  FontSize="30" Background="#B2D5FFAB" Foreground="Black" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" BorderBrush="#FF6F7072" BorderThickness="1" Margin="5,0,5,0" />
+
+
+        <UniformGrid Rows="6" Columns="4" Grid.Column="0" Grid.Row="2" Margin="5">
+            <Button x:Name="procentBtn" Content="%" FontWeight="Bold" Margin="1"/>
+            <Button x:Name="deleteInput_btn" Content="CE" FontWeight="Bold" Margin="1" Click="deleteInput_btn_Click"/>
+            <Button x:Name="deleteAll_btn" Content="C" FontWeight="Bold" Margin="1" Click="deleteAll_btn_Click"/>
+            <Button x:Name="deleteString_btn" Content="←" FontWeight="Bold" Margin="1" Click="deleteString_btn_Click"/>
+            <Button x:Name="revrseBtn" Content="1/x" FontWeight="Bold" Margin="1" Click="revrseBtn_Click"/>
+            <Button x:Name="degree2_btn" Content="x²" FontWeight="Bold" Margin="1" Click="degree2_btn_Click"/>
+            <Button x:Name="degree3_btn" Content="x³" FontWeight="Bold" Margin="1" Click="degree3_btn_Click"/>
+            <Button x:Name="divBtn" Content="÷" FontWeight="Bold" Margin="1" Click="divBtn_Click"/>
+            <Button x:Name="btn_1" Content="1" Background="White" Margin="1" Click="btn_1_Click"/>
+            <Button x:Name="btn_2" Content="2" Background="White" Margin="1" Click="btn_2_Click"/>
+            <Button x:Name="btn_3" Content="3" Background="White" Margin="1" Click="btn_3_Click"/>
+            <Button x:Name="multiplyBtn" Content="x" FontWeight="Bold" Margin="1" Click="multiplyBtn_Click"/>
+            <Button x:Name="btn_4" Content="4" Background="White" Margin="1" Click="btn_4_Click"/>
+            <Button x:Name="btn_5" Content="5" Background="White" Margin="1" Click="btn_5_Click"/>
+            <Button x:Name="btn_6" Content="6" Background="White" Margin="1" Click="btn_6_Click"/>
+            <Button x:Name="minusBtn" Content="-" FontWeight="Bold" Margin="1" Click="minusBtn_Click"/>
+            <Button x:Name="btn_7" Content="7" Background="White" Margin="1" Click="btn_7_Click"/>
+            <Button x:Name="btn_8" Content="8" Background="White" Margin="1" Click="btn_8_Click"/>
+            <Button x:Name="btn_9" Content="9" Background="White" Margin="1" Click="btn_9_Click"/>
+            <Button x:Name="plusBtn" Content="+" FontWeight="Bold" Margin="1" Click="plusBtn_Click"/>
+            <Button x:Name="plusMinus_btn" Content="+/-" Background="White" Margin="1" Click="plusMinus_btn_Click" />
+            <Button x:Name="btn_0" Content="0" Background="White" Margin="1" Click="btn_0_Click"/>
+            <Button x:Name="commaBtn" Content="," Background="White" Margin="1" Click="commaBtn_Click"/>
+            <Button x:Name="resultBtn" Content="=" FontWeight="Bold" Margin="1" Click="resultBtn_Click"/>
+        </UniformGrid>
+    </Grid>
+</Window>
