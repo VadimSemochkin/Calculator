@@ -165,7 +165,7 @@ namespace Calculator
                     textBox1.Text = buf + "/";
                 }
             }
-            if (y == 0)
+            if (y == 0 && buf != "")
             {
                 textBox1.Text += "/";
             }
@@ -188,7 +188,7 @@ namespace Calculator
 
             textBox2.Text = Convert.ToString(rez);
             x = Convert.ToDouble(textBox2.Text);
-            y = 0;
+            y = 1;
         }
 
         private void multiplyBtn_Click(object sender, RoutedEventArgs e)
@@ -197,14 +197,14 @@ namespace Calculator
 
             if (buf != "")
             {
-                if (buf[buf.Length - 1] == '+' || buf[buf.Length - 1] == '-' || buf[buf.Length - 1] == '/' /*|| buf[buf.Length - 1] == '*'*/ || buf[buf.Length - 1] == '%')
+                if (buf[buf.Length - 1] == '+' || buf[buf.Length - 1] == '-' || buf[buf.Length - 1] == '/'  || buf[buf.Length - 1] == '%')
                 {
                     buf = buf.Remove(buf.Length - 1);
 
                     textBox1.Text = buf + "*";
                 }
             }
-            if (y == 0)
+            if (y == 0 && buf != "")
             {
                 textBox1.Text += "*";
             }
@@ -223,9 +223,10 @@ namespace Calculator
                 rez = x * y;
             }
 
-            textBox2.Text = Convert.ToString(rez);
-            x = Convert.ToDouble(textBox2.Text);
+            
+            x = rez;
             y = 0;
+            textBox2.Text = Convert.ToString(rez);
         }
 
         private void minusBtn_Click(object sender, RoutedEventArgs e)
@@ -243,7 +244,7 @@ namespace Calculator
 
             }
 
-            if (y == 0 & buf != "")
+            if (y == 0 && buf != "")
             {
                 textBox1.Text += "-";
             }
@@ -280,7 +281,7 @@ namespace Calculator
                 }
             }
 
-            if (y == 0 & buf != "")
+            if (y == 0 && buf != "")
             {
                 textBox1.Text += "+";
             }
@@ -337,9 +338,11 @@ namespace Calculator
                 rez = x / y;
                 textBox2.Text = Convert.ToString(rez);
             }
-            rez = 0;
-            x = 0; y = 0;
-            textBox1.Text = null;
+            //rez = 0;
+            //x = 0; y = 0;
+            x = rez;
+            y = 0;
+            textBox1.Text = Convert.ToString(rez);
         }
 
         private void btn_9_Click(object sender, RoutedEventArgs e)
